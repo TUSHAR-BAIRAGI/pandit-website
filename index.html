@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>पंडित तुषार बैरागी</title>
+  <style>
+    :root {
+      --bg: #fff;
+      --text: #000;
+      --card: #fff8e1;
+    }
+
+    body.dark {
+      --bg: #121212;
+      --text: #f5f5f5;
+      --card: #1e1e1e;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: 0.3s ease;
+    }
+
+    header {
+      background-color: #e60000;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .container {
+      padding: 1.5rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: var(--card);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom: 2rem;
+    }
+
+    .profile-img {
+      width: 150px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .temple-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .call-btn { background-color: #28a745; color: white; }
+    .whatsapp-btn { background-color: #25D366; color: white; }
+    .fb-btn { background-color: #3b5998; color: white; }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    img.qr {
+      width: 200px;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .profile-img { width: 100%; }
+      button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>पंडित तुषार बैरागी</h1>
+    <p>|| जय श्री महाकाल ||</p>
+    <button onclick="toggleDarkMode()" class="toggle-btn">🌙 डार्क मोड</button>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <img src="pandit-photo.JPEG" alt="Pandit Ji" class="profile-img">
+      <p><strong>मोबाइल:</strong> 8305143017</p>
+      <p><strong>स्थान:</strong> पिपलीनाका, उज्जैन (म.प्र.)</p>
+      <p><strong>Instagram:</strong> @panditjijujain</p>
+
+      <a href="tel:8305143017">
+        <button class="call-btn">📞 कॉल करें</button>
+      </a>
+      <a href="https://wa.me/918305143017" target="_blank">
+        <button class="whatsapp-btn">💬 WhatsApp</button>
+      </a>
+      <a href="https://facebook.com/panditjijujain" target="_blank">
+        <button class="fb-btn">📘 Facebook</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <h2>सेवाएं:</h2>
+      <ul>
+        <li>विवाह, गृहप्रवेश, यज्ञ, मुंडन, नामकरण, विद्यारंभ</li>
+        <li>महामृत्युंजय जाप, पितृशांति, वास्तु शांति</li>
+        <li>कालसर्प दोष, नवग्रह पूजा, संतान प्राप्ति</li>
+        <li>शनि शांति, कुंडली मिलान, वेदिक अनुष्ठान</li>
+      </ul>
+      <img src="temple-image.JPEG" alt="Mandir" class="temple-img">
+    </div>
+
+    <div class="card">
+      <h2>📅 बुकिंग फॉर्म</h2>
+      <form onsubmit="submitForm(); return false;">
+        <label>आपका नाम:</label>
+        <input type="text" required>
+
+        <label>मोबाइल नंबर:</label>
+        <input type="tel" required>
+
+        <label>कार्य का विवरण:</label>
+        <textarea rows="3" required></textarea>
+
+        <button type="submit" style="background-color:#e60000; color:white;">📨 बुकिंग भेजें</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>📍 गूगल मैप स्थान</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.207380062382!2d75.77850367593466!3d23.182270779036444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3963745518d8e5eb%3A0xb174a4f7f6b7268!2sMahakaleshwar%20Jyotirlinga!5e0!3m2!1sen!2sin!4v1689931982761!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="card">
+      <h2>💳 UPI पेमेंट</h2>
+      <p>QR Code स्कैन करें और भुगतान करें:</p>
+      <img src="qr-code.JPEG" alt="UPI QR" class="qr">
+    </div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+
+    function submitForm() {
+      alert("आपकी बुकिंग भेज दी गई है! 🙏");
+    }
+  </script>
+</body>
+</html>
