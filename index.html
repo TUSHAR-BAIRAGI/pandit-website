@@ -149,18 +149,18 @@
     </div>
 
     <div class="card">
-      <h2>📅 बुकिंग फॉर्म</h2>
-      <form onsubmit="submitForm(); return false;">
+      <h2>🗕️ बुकिंग फॉर्म</h2>
+      <form id="bookingForm" onsubmit="sendWhatsApp(); return false;">
         <label>आपका नाम:</label>
-        <input type="text" required>
+        <input type="text" id="name" required>
 
         <label>मोबाइल नंबर:</label>
-        <input type="tel" required>
+        <input type="tel" id="phone" required>
 
-        <label>कार्य का विवरण:</label>
-        <textarea rows="3" required></textarea>
+        <label>तारीख:</label>
+        <input type="date" id="date" required>
 
-        <button type="submit" style="background-color:#e60000; color:white;">📨 बुकिंग भेजें</button>
+        <button type="submit" style="background-color:#25D366; color:white;">💌 WhatsApp पर भेजें</button>
       </form>
     </div>
 
@@ -181,8 +181,16 @@
       document.body.classList.toggle('dark');
     }
 
-    function submitForm() {
-      alert("आपकी बुकिंग भेज दी गई है! 🙏");
+    function sendWhatsApp() {
+      var name = document.getElementById("name").value;
+      var phone = document.getElementById("phone").value;
+      var date = document.getElementById("date").value;
+
+      var message = `🙏 बुकिंग डिटेल्स 🙏%0Aनाम: ${name}%0Aफोन: ${phone}%0Aतारीख: ${date}`;
+
+      var whatsappNumber = "918305143017";
+      var url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+      window.open(url, "_blank");
     }
   </script>
 </body>
